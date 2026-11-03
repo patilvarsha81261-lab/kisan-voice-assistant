@@ -1,12 +1,19 @@
+
 """Central configuration for Kisan Voice Assistant."""
 
 from pathlib import Path
 from typing import Literal
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
+
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
 
     # Base Paths
     BASE_DIR: Path = Path(__file__).resolve().parent
@@ -16,8 +23,16 @@ class Settings(BaseSettings):
     CHROMA_PERSIST_DIR: Path = DATA_DIR / "chroma_db"
 
     # LLM Settings
-    LLM_PROVIDER: Literal["ollama", "anthropic"] = "ollama"
+    LLM_PROVIDER: Literal["ollama", "anthropic", "gemini"] = "gemini"
+
+    # Gemini
+    GEMINI_API_KEY: str = ""
+    GEMINI_MODEL: str = "gemini-2.5-flash"
+
+    # Anthropic
     ANTHROPIC_API_KEY: str = ""
+
+    # Ollama
     OLLAMA_BASE_URL: str = "http://localhost:11434"
     OLLAMA_MODEL: str = "qwen2.5:7b-instruct-q4_K_M"
 

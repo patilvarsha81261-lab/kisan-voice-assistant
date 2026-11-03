@@ -29,3 +29,5 @@ gradio>=4.31.0
 # Testing & Eval
 pytest>=8.2.0
 pytest-asyncio>=0.23.0
+
+google-genai
