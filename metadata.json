@@ -1,0 +1,6 @@
+{
+  "name": "Kisan Voice Assistant",
+  "description": "Multilingual AI voice assistant for Indian farmers supporting Marathi, Hindi, and English with real-time weather, live mandi prices, government schemes, and RAG crop advisories.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

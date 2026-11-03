@@ -1,0 +1,489 @@
+{
+  "version": "1.0",
+  "total_questions": 60,
+  "languages": ["mr", "hi", "en"],
+  "questions": [
+    {
+      "id": "mr_01",
+      "language": "mr",
+      "category": "mandi_price",
+      "query": "कोल्हापुरात आज उसाचा दर काय आहे?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["3300", "कोल्हापूर", "ऊस", "क्विंटल"]
+    },
+    {
+      "id": "mr_02",
+      "language": "mr",
+      "category": "weather",
+      "query": "कोल्हापुरात उद्या पाऊस पडेल का?",
+      "expected_tools": ["get_weather_forecast"],
+      "expected_facts": ["पाऊस", "शक्यता", "तापमान"]
+    },
+    {
+      "id": "mr_03",
+      "language": "mr",
+      "category": "combined",
+      "query": "कोल्हापूर मध्ये आज उसाचा भाव काय आहे आणि उद्या पाऊस पडेल का?",
+      "expected_tools": ["get_mandi_price", "get_weather_forecast"],
+      "expected_facts": ["3300", "पाऊस"]
+    },
+    {
+      "id": "mr_04",
+      "language": "mr",
+      "category": "crop_advisory",
+      "query": "उसाची पाने पिवळी पडत आहेत काय फवारावे?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["फेरस सल्फेट", "FeSO4", "लोह", "sugarcane_cultivation_guide.pdf", "Page: 1"]
+    },
+    {
+      "id": "mr_05",
+      "language": "mr",
+      "category": "crop_advisory",
+      "query": "उसावर खोड कीड लागली आहे काय उपाय करावा?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["कार्टाप", "chlorantraniliprole", "खोड कीड", "sugarcane_cultivation_guide.pdf", "Page: 2"]
+    },
+    {
+      "id": "mr_06",
+      "language": "mr",
+      "category": "crop_advisory",
+      "query": "सोयाबीनवर चक्री भुंग्याचा प्रादुर्भाव झाला आहे कोणती फवारणी करावी?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["क्लोरांट्रानिलीप्रोल", "soybean_pest_advisory_mpkv.pdf", "Page: 1"]
+    },
+    {
+      "id": "mr_07",
+      "language": "mr",
+      "category": "crop_advisory",
+      "query": "सोयाबीन पिकावर तांबेरा रोगासाठी कोणती बुरशीनाशक वापरावी?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["हेक्साकोनाझोल", "तेबुकोनाझोल", "soybean_pest_advisory_mpkv.pdf", "Page: 2"]
+    },
+    {
+      "id": "mr_08",
+      "language": "mr",
+      "category": "crop_advisory",
+      "query": "द्राक्षावर केवडा रोग आला आहे कोणती फवारणी करावी?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["मॅनकोझेब", "बोर्डो मिश्रण", "grape_export_advisory_nrcg.pdf", "Page: 1"]
+    },
+    {
+      "id": "mr_09",
+      "language": "mr",
+      "category": "mandi_price",
+      "query": "सांगली मध्ये सोयाबीनचा भाव काय आहे?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["4610", "सांगली", "सोयाबीन"]
+    },
+    {
+      "id": "mr_10",
+      "language": "mr",
+      "category": "mandi_price",
+      "query": "नाशिक पिंपळगाव बाजारात आज द्राक्षाचा दर किती आहे?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["8200", "नाशिक", "द्राक्ष"]
+    },
+    {
+      "id": "mr_11",
+      "language": "mr",
+      "category": "govt_scheme",
+      "query": "पीएम किसान योजनेत वर्षाला किती रुपये मिळतात?",
+      "expected_tools": ["search_schemes"],
+      "expected_facts": ["6000", "तीन हप्ते", "2000", "pm_kisan_operational_guidelines.pdf", "Page: 1"]
+    },
+    {
+      "id": "mr_12",
+      "language": "mr",
+      "category": "govt_scheme",
+      "query": "पीएम किसान योजनेसाठी कोण अपात्र आहे?",
+      "expected_tools": ["search_schemes"],
+      "expected_facts": ["इन्कम टॅक्स", "पेन्शन 10,000", "pm_kisan_operational_guidelines.pdf", "Page: 2"]
+    },
+    {
+      "id": "mr_13",
+      "language": "mr",
+      "category": "govt_scheme",
+      "query": "पंतप्रधान पीक विमा योजनेत खरीप पिकासाठी किती टक्के विमा हप्ता भरावा लागतो?",
+      "expected_tools": ["search_schemes"],
+      "expected_facts": ["2%", "खरीप", "विमा"]
+    },
+    {
+      "id": "mr_14",
+      "language": "mr",
+      "category": "weather",
+      "query": "पुण्यात पुढील तीन दिवस पाऊस कसा राहील?",
+      "expected_tools": ["get_weather_forecast"],
+      "expected_facts": ["पुणे", "हवामान", "पाऊस"]
+    },
+    {
+      "id": "mr_15",
+      "language": "mr",
+      "category": "mandi_price",
+      "query": "लासलगाव बाजारात कांद्याचा भाव सांगा",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["2450", "कांदा", "लासलगाव"]
+    },
+    {
+      "id": "mr_16",
+      "language": "mr",
+      "category": "mandi_price",
+      "query": "अकोला बाजारात आज कापसाला काय भाव मिळाला?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["7400", "कापूस", "अकोला"]
+    },
+    {
+      "id": "mr_17",
+      "language": "mr",
+      "category": "combined",
+      "query": "पुण्यात आज टोमॅटोचा भाव काय आहे आणि पाऊस पडेल का?",
+      "expected_tools": ["get_mandi_price", "get_weather_forecast"],
+      "expected_facts": ["1850", "पुणे"]
+    },
+    {
+      "id": "mr_18",
+      "language": "mr",
+      "category": "crop_advisory",
+      "query": "सोयाबीन पिकावर पिवळा मोझॅक रोगाचा प्रसार कसा थांबवावा?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["पांढरी माशी", "एसिटामिप्रिड", "soybean_pest_advisory_mpkv.pdf"]
+    },
+    {
+      "id": "mr_19",
+      "language": "mr",
+      "category": "out_of_scope",
+      "query": "भारताची क्रिकेट मॅच कधी आहे?",
+      "expected_tools": [],
+      "expected_facts": ["फक्त शेती", "माहिती उपलब्ध नाही"]
+    },
+    {
+      "id": "mr_20",
+      "language": "mr",
+      "category": "out_of_scope",
+      "query": "बिटकॉइन कसा खरेदी करावा?",
+      "expected_tools": [],
+      "expected_facts": ["फक्त शेती", "मदत"]
+    },
+
+    {
+      "id": "hi_01",
+      "language": "hi",
+      "category": "mandi_price",
+      "query": "कोल्हापुर में आज गन्ने का क्या भाव है?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["3300", "गन्ना", "कोल्हापुर"]
+    },
+    {
+      "id": "hi_02",
+      "language": "hi",
+      "category": "weather",
+      "query": "पुणे में कल बारिश होगी क्या?",
+      "expected_tools": ["get_weather_forecast"],
+      "expected_facts": ["पुणे", "बारिश", "तापमान"]
+    },
+    {
+      "id": "hi_03",
+      "language": "hi",
+      "category": "combined",
+      "query": "लातूर में सोयाबीन का भाव क्या है और मौसम कैसा रहेगा?",
+      "expected_tools": ["get_mandi_price", "get_weather_forecast"],
+      "expected_facts": ["4750", "सोयाबीन"]
+    },
+    {
+      "id": "hi_04",
+      "language": "hi",
+      "category": "crop_advisory",
+      "query": "गन्ने की पत्तियां पीली पड़ रही हैं क्या छिड़काव करें?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["फेरस सल्फेट", "FeSO4", "लोहा", "sugarcane_cultivation_guide.pdf"]
+    },
+    {
+      "id": "hi_05",
+      "language": "hi",
+      "category": "crop_advisory",
+      "query": "गन्ने में तना छेदक कीट की रोकथाम कैसे करें?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["कार्टाप", "क्लोरांट्रानिलीप्रोल", "sugarcane_cultivation_guide.pdf"]
+    },
+    {
+      "id": "hi_06",
+      "language": "hi",
+      "category": "crop_advisory",
+      "query": "सोयाबीन में गर्डल बीटल या चक्री भुंगा के नियंत्रण हेतु कीटनाशक बताएं",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["क्लोरांट्रानिलीप्रोल", "थियामेथोक्सम", "soybean_pest_advisory_mpkv.pdf"]
+    },
+    {
+      "id": "hi_07",
+      "language": "hi",
+      "category": "crop_advisory",
+      "query": "सोयाबीन में गेरूई या रस्ट रोग के लिए कौन सी दवा डालें?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["हेक्साकोनाज़ोल", "टेबुकोनाज़ोल", "रस्ट"]
+    },
+    {
+      "id": "hi_08",
+      "language": "hi",
+      "category": "crop_advisory",
+      "query": "अंगूर में डाउनी मिल्ड्यू या केवड़ा रोग की रोकथाम",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["मैनकोज़ेब", "बोर्डो मिश्रण", "grape_export_advisory_nrcg.pdf"]
+    },
+    {
+      "id": "hi_09",
+      "language": "hi",
+      "category": "mandi_price",
+      "query": "नासिक में प्याज का आज का मंडी भाव क्या है?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["2450", "नासिक", "प्याज"]
+    },
+    {
+      "id": "hi_10",
+      "language": "hi",
+      "category": "mandi_price",
+      "query": "अकोला में कपास का न्यूनतम और अधिकतम भाव क्या है?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["7400", "7100", "7650", "कपास"]
+    },
+    {
+      "id": "hi_11",
+      "language": "hi",
+      "category": "govt_scheme",
+      "query": "पीएम किसान सम्मान निधि में सालाना कितनी राशि मिलती है?",
+      "expected_tools": ["search_schemes"],
+      "expected_facts": ["6000", "तीन किस्त", "2000", "pm_kisan_operational_guidelines.pdf"]
+    },
+    {
+      "id": "hi_12",
+      "language": "hi",
+      "category": "govt_scheme",
+      "query": "पीएम किसान योजना में ई-केवाईसी और बैंक खाता आधार लिंक क्यों जरूरी है?",
+      "expected_tools": ["search_schemes"],
+      "expected_facts": ["eKYC", "आधार", "डीबीटी"]
+    },
+    {
+      "id": "hi_13",
+      "language": "hi",
+      "category": "govt_scheme",
+      "query": "प्रधानमंत्री फसल बीमा योजना में रबी फसल का प्रीमियम कितना है?",
+      "expected_tools": ["search_schemes"],
+      "expected_facts": ["1.5%", "रबी", "फसल बीमा"]
+    },
+    {
+      "id": "hi_14",
+      "language": "hi",
+      "category": "weather",
+      "query": "नागपुर में अगले दो दिनों का मौसम कैसा रहेगा?",
+      "expected_tools": ["get_weather_forecast"],
+      "expected_facts": ["नागपुर", "तापमान"]
+    },
+    {
+      "id": "hi_15",
+      "language": "hi",
+      "category": "mandi_price",
+      "query": "सांगली मंडी में आज अंगूर का क्या रेट है?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["7900", "सांगली", "अंगूर"]
+    },
+    {
+      "id": "hi_16",
+      "language": "hi",
+      "category": "mandi_price",
+      "query": "सोलापुर में गेहूं और ज्वार का भाव क्या है?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["2650", "गेहूं"]
+    },
+    {
+      "id": "hi_17",
+      "language": "hi",
+      "category": "combined",
+      "query": "पुणे में प्याज का दाम क्या है और क्या आज बारिश की संभावना है?",
+      "expected_tools": ["get_mandi_price", "get_weather_forecast"],
+      "expected_facts": ["2350", "पुणे"]
+    },
+    {
+      "id": "hi_18",
+      "language": "hi",
+      "category": "crop_advisory",
+      "query": "सोयाबीन में पीली मोज़ेक बीमारी का वाहक कौन है?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["सफेद मक्खी", "Whitefly"]
+    },
+    {
+      "id": "hi_19",
+      "language": "hi",
+      "category": "out_of_scope",
+      "query": "शेयर मार्केट में कौन से शेयर खरीदें?",
+      "expected_tools": [],
+      "expected_facts": ["केवल कृषि", "जानकारी नहीं"]
+    },
+    {
+      "id": "hi_20",
+      "language": "hi",
+      "category": "out_of_scope",
+      "query": "नई बॉलीवुड फिल्म की टिकट कैसे बुक करें?",
+      "expected_tools": [],
+      "expected_facts": ["केवल कृषि"]
+    },
+
+    {
+      "id": "en_01",
+      "language": "en",
+      "category": "mandi_price",
+      "query": "What is the modal price of sugarcane in Kolhapur today?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["3300", "Kolhapur", "sugarcane"]
+    },
+    {
+      "id": "en_02",
+      "language": "en",
+      "category": "weather",
+      "query": "Will it rain tomorrow in Kolhapur?",
+      "expected_tools": ["get_weather_forecast"],
+      "expected_facts": ["rain", "Kolhapur", "temperature"]
+    },
+    {
+      "id": "en_03",
+      "language": "en",
+      "category": "combined",
+      "query": "What is the sugarcane price in Kolhapur and will it rain tomorrow?",
+      "expected_tools": ["get_mandi_price", "get_weather_forecast"],
+      "expected_facts": ["3300", "Kolhapur"]
+    },
+    {
+      "id": "en_04",
+      "language": "en",
+      "category": "crop_advisory",
+      "query": "My sugarcane leaves are turning yellow what should I spray?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["Ferrous Sulphate", "FeSO4", "Citric Acid", "sugarcane_cultivation_guide.pdf", "Page: 1"]
+    },
+    {
+      "id": "en_05",
+      "language": "en",
+      "category": "crop_advisory",
+      "query": "How to manage early shoot borer in sugarcane dead hearts?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["Cartap Hydrochloride", "Chlorantraniliprole", "sugarcane_cultivation_guide.pdf", "Page: 2"]
+    },
+    {
+      "id": "en_06",
+      "language": "en",
+      "category": "crop_advisory",
+      "query": "What pesticide is recommended for soybean girdle beetle?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["Chlorantraniliprole 18.5% SC", "soybean_pest_advisory_mpkv.pdf", "Page: 1"]
+    },
+    {
+      "id": "en_07",
+      "language": "en",
+      "category": "crop_advisory",
+      "query": "Which fungicide controls rust in soybean crop?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["Hexaconazole 5% EC", "Tebuconazole", "soybean_pest_advisory_mpkv.pdf", "Page: 2"]
+    },
+    {
+      "id": "en_08",
+      "language": "en",
+      "category": "crop_advisory",
+      "query": "How to control downy mildew in grapes after pruning?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["Mancozeb", "Bordeaux mixture", "grape_export_advisory_nrcg.pdf", "Page: 1"]
+    },
+    {
+      "id": "en_09",
+      "language": "en",
+      "category": "mandi_price",
+      "query": "What is the price of soybean in Latur APMC?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["4750", "Latur", "soybean"]
+    },
+    {
+      "id": "en_10",
+      "language": "en",
+      "category": "mandi_price",
+      "query": "What is the grape modal rate in Nashik Pimpalgaon?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["8200", "Nashik", "grapes"]
+    },
+    {
+      "id": "en_11",
+      "language": "en",
+      "category": "govt_scheme",
+      "query": "How much financial support is given under PM-KISAN per year?",
+      "expected_tools": ["search_schemes"],
+      "expected_facts": ["Rs. 6,000", "three installments", "2,000", "pm_kisan_operational_guidelines.pdf", "Page: 1"]
+    },
+    {
+      "id": "en_12",
+      "language": "en",
+      "category": "govt_scheme",
+      "query": "Who is excluded from PM-KISAN scheme benefits?",
+      "expected_tools": ["search_schemes"],
+      "expected_facts": ["Income Tax", "pension of Rs. 10,000", "pm_kisan_operational_guidelines.pdf", "Page: 2"]
+    },
+    {
+      "id": "en_13",
+      "language": "en",
+      "category": "govt_scheme",
+      "query": "What is the farmer premium rate for Kharif crops under PMFBY?",
+      "expected_tools": ["search_schemes"],
+      "expected_facts": ["2.0%", "Kharif", "PMFBY"]
+    },
+    {
+      "id": "en_14",
+      "language": "en",
+      "category": "weather",
+      "query": "What is the 3-day weather forecast for Pune district?",
+      "expected_tools": ["get_weather_forecast"],
+      "expected_facts": ["Pune", "temperature", "precipitation"]
+    },
+    {
+      "id": "en_15",
+      "language": "en",
+      "category": "mandi_price",
+      "query": "What is the price of onion in Lasalgaon market?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["2450", "onion", "Lasalgaon"]
+    },
+    {
+      "id": "en_16",
+      "language": "en",
+      "category": "mandi_price",
+      "query": "What is the cotton price in Akola APMC today?",
+      "expected_tools": ["get_mandi_price"],
+      "expected_facts": ["7400", "cotton", "Akola"]
+    },
+    {
+      "id": "en_17",
+      "language": "en",
+      "category": "combined",
+      "query": "What is the price of soybean in Sangli and will it rain there tomorrow?",
+      "expected_tools": ["get_mandi_price", "get_weather_forecast"],
+      "expected_facts": ["4610", "Sangli"]
+    },
+    {
+      "id": "en_18",
+      "language": "en",
+      "category": "crop_advisory",
+      "query": "What weather conditions trigger downy mildew in grape vines?",
+      "expected_tools": ["search_advisories"],
+      "expected_facts": ["temperature 20-25 C", "humidity >80%", "grape_export_advisory_nrcg.pdf"]
+    },
+    {
+      "id": "en_19",
+      "language": "en",
+      "category": "out_of_scope",
+      "query": "How do I mine ethereum cryptocurrency?",
+      "expected_tools": [],
+      "expected_facts": ["agriculture only", "cannot assist"]
+    },
+    {
+      "id": "en_20",
+      "language": "en",
+      "category": "out_of_scope",
+      "query": "Who is the prime minister of the United Kingdom?",
+      "expected_tools": [],
+      "expected_facts": ["farming only"]
+    }
+  ]
+}
