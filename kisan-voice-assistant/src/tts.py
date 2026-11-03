@@ -27,6 +27,7 @@ def clean_text_for_speech(text: str) -> str:
     cleaned = re.sub(r"\s+", " ", cleaned).strip()
     return cleaned
 
+
 class TextToSpeechEngine:
     """Generates audio speech files from text using edge-tts with fallback support."""
 
